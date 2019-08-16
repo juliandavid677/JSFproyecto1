@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <center>
+            Por Favor proporciona información
+            <h:outputText value="&lt;br/&gt;" escape="false" />
+            <h:outputText value="&lt;br/&gt;" escape="false" />
+            <h:form style="text-align: center">
+                <h:outputLabel value="Nombre: " for="nombre"/>
+                <h:inputText id="nombre" value="#{indexController.nombre}" />
+                <h:outputText value="&lt;br/&gt;" escape="false" />
+                <h:outputText value="&lt;br/&gt;" escape="false" />
+                <h:outputLabel value="Sueldo por Día: " for="sueldo"/>
+                <h:inputText id="sueldo" value="#{indexController.sueldo}" />
+                <h:outputText value="&lt;br/&gt;" escape="false" />
+                <h:outputText value="&lt;br/&gt;" escape="false" />
+                <h:outputLabel value="Dias Trabajados: " for="dias"/>
+                <h:inputText id="dias" value="#{indexController.dias}" />
+                <h:outputText value="&lt;br/&gt;" escape="false" />
+                <h:outputText value="&lt;br/&gt;" escape="false" />
+                <h:outputText value="&lt;br/&gt;" escape="false" />
+                <h:outputLabel value="Idiomas Utilizados " style="text-align: center" />
+                <center>
+                    <h:selectManyCheckbox value = "#{indexController.idiomas}" id="idiomas" layout="pageDirection"> 
+                        <f:selectItem itemValue = "Ingles" itemLabel = "Ingles" /> 
+                        <f:selectItem itemValue = "Español" itemLabel = "Español" />
+                        <f:selectItem itemValue = "Frances" itemLabel = "Frances" />
+                        <f:selectItem itemValue = "Aleman" itemLabel = "Aleman" />
+                    </h:selectManyCheckbox>
+                    <h:commandButton value="Entrar" action="mostrar?faces-redirect=true" />    
+                </center>
+            </h:form>
+        </center>
+    </h:body>
+</html>
+
