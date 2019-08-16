@@ -19,7 +19,6 @@ public class Logica {
 //                sueldoTotal = sueldoTotal + 100000;
 //            }
 //        }
-        System.out.println("SUELDO" + sueldo + "DIAS" + dias);
         System.out.println("===ERROR PROCESAR DATOS=====" + sueldoTotal);
         return sueldoTotal;
     }
